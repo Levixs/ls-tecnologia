@@ -1,11 +1,5 @@
-import { Button } from '../ui/button'
 import { motion } from 'framer-motion'
-import { useParticles } from '../../hooks/useParticles'
-
-const ParticlesBackground = () => {
-    useParticles('hero-bg')
-    return null
-}
+import { Button } from '../ui/button'
 
 export default function HeroSection() {
     return (
@@ -32,7 +26,6 @@ export default function HeroSection() {
                 ))}
             </div>
 
-            <ParticlesBackground />
 
             <div id='#hero' className="container mx-auto px-6 pt-36 pb-20 relative z-10">
                 <div className="flex flex-col lg:flex-row items-center gap-12">
