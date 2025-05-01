@@ -60,7 +60,7 @@ export default function Header() {
               whileTap={{ scale: 0.95 }}
               transition={{ type: 'spring', stiffness: 400, damping: 10 }}
             >
-              <a href="#home" className="flex items-center gap-2 focus:outline-none">
+              <a href="#hero" className="flex items-center gap-2 focus:outline-none">
                 <motion.div
                   className="w-16 h-16 rounded-full border-2 border-white/10 shadow-lg shadow-blue-500/30 overflow-hidden flex items-center justify-center"
                   whileHover={{ rotate: 5, scale: 1.1 }}
