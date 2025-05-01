@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import UnderConstruction from "./images/PaginaEmConstrucao.webp";
+import UnderConstruction from "./images/UnderConstruction.webp";
 
 export default function page() {
   return (
