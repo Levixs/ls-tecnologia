@@ -1,5 +1,6 @@
 import { Github, Linkedin, Mail, Phone, Send } from 'lucide-react';
 import React from 'react';
+import { motion } from 'framer-motion';
 
 type ContactItemProps = {
   icon: React.ReactNode;
@@ -10,23 +11,37 @@ type ContactItemProps = {
   hoverColorClass?: string;
 };
 
-const ContactItem = React.memo(({ 
-  icon, 
-  title, 
-  value, 
-  href, 
+const ContactItem = React.memo(({
+  icon,
+  title,
+  value,
+  href,
   colorClass,
-  hoverColorClass 
+  hoverColorClass
 }: ContactItemProps) => (
-  <div className="flex items-start gap-4">
-    <div className={`p-3 bg-opacity-10 rounded-lg ${colorClass}`}>
+  <motion.div
+    className="flex items-start gap-4"
+    whileHover={{ x: 5 }}
+    transition={{ type: 'spring', stiffness: 300 }}
+  >
+    <motion.div
+      className={`p-3 bg-opacity-10 rounded-lg ${colorClass}`}
+      animate={{
+        rotate: [0, 5, -5, 0],
+      }}
+      transition={{
+        duration: 10,
+        repeat: Infinity,
+        ease: "easeInOut"
+      }}
+    >
       {icon}
-    </div>
+    </motion.div>
     <div className="flex-1">
       <h4 className="text-sm font-medium text-gray-400">{title}</h4>
       {href ? (
-        <a 
-          href={href} 
+        <a
+          href={href}
           className={`text-lg text-gray-200 transition-colors ${hoverColorClass || 'hover:text-gray-300'}`}
           target={href.startsWith('http') ? '_blank' : undefined}
           rel={href.startsWith('http') ? 'noopener noreferrer' : undefined}
@@ -37,24 +52,64 @@ const ContactItem = React.memo(({
         <p className="text-lg text-gray-200">{value}</p>
       )}
     </div>
-  </div>
+  </motion.div>
 ));
 
 export default function Contact() {
   return (
-    <section id="contact" className="py-20">
-      <div className="container mx-auto px-4 sm:px-6">
-        <div className="text-center mb-16">
+    <section id="contact" className="relative py-20 overflow-hidden">
+      <div className="absolute inset-0 overflow-hidden opacity-20">
+        <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px]"></div>
+
+        {[...Array(3)].map((_, i) => (
+          <motion.div
+            key={i}
+            className="absolute h-[1px] bg-gradient-to-r from-transparent via-blue-400/50 to-transparent"
+            initial={{
+              x: `${Math.random() * 100}%`,
+              y: `${Math.random() * 100}%`,
+              width: `${Math.random() * 200 + 100}px`,
+              rotate: Math.random() * 360,
+              opacity: 0.1
+            }}
+            animate={{
+              x: `${Math.random() * 100}%`,
+              y: `${Math.random() * 100}%`,
+              opacity: [0.1, 0.3, 0.1]
+            }}
+            transition={{
+              duration: 20 + Math.random() * 20,
+              repeat: Infinity,
+              ease: "linear"
+            }}
+          />
+        ))}
+      </div>
+
+      <div className="container mx-auto px-4 sm:px-6 relative z-10">
+        <motion.div
+          className="text-center mb-16"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true }}
+        >
           <h2 className="text-3xl md:text-4xl font-bold text-gray-100 mb-4">
             Vamos <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">Conversar</span>
           </h2>
           <p className="text-lg text-gray-400 max-w-2xl mx-auto">
             Entre em contato para discutir seu projeto ou solicitar um orçamento personalizado.
           </p>
-        </div>
+        </motion.div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-          <div className="bg-gray-800/50 rounded-2xl p-6 border border-gray-700/50 hover:border-blue-500/60 transition-colors">
+          <motion.div
+            className="bg-gray-800/50 rounded-2xl p-6 border border-gray-700/50 hover:border-blue-500/60 transition-colors backdrop-blur-sm"
+            initial={{ opacity: 0, x: -20 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            viewport={{ once: true }}
+          >
             <h3 className="text-2xl font-semibold text-gray-100 mb-6">Envie uma mensagem</h3>
 
             <form className="space-y-4">
@@ -91,18 +146,26 @@ export default function Contact() {
                 ></textarea>
               </div>
 
-              <button
+              <motion.button
                 type="submit"
-                className="w-full flex items-center justify-center gap-2 px-6 py-3 bg-gradient-to-r from-blue-500 to-cyan-500 text-white rounded-lg font-medium hover:from-blue-600 hover:to-cyan-600 transition-all hover:shadow-lg hover:shadow-blue-500/20 active:scale-[0.98]"
+                className="w-full flex items-center justify-center gap-2 px-6 py-3 bg-gradient-to-r from-blue-500 to-cyan-500 text-white rounded-lg font-medium hover:from-blue-600 hover:to-cyan-600 transition-all hover:shadow-lg hover:shadow-blue-500/20"
+                whileHover={{ scale: 1.02 }}
+                whileTap={{ scale: 0.98 }}
               >
                 <Send className="w-4 h-4" />
                 Enviar Mensagem
-              </button>
+              </motion.button>
             </form>
-          </div>
+          </motion.div>
 
-          <div className="space-y-6">
-            <div className="bg-gray-800/50 rounded-2xl p-6 border border-gray-700/50 hover:border-blue-500/60 transition-colors">
+          <motion.div
+            className="space-y-6"
+            initial={{ opacity: 0, x: 20 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.6, delay: 0.4 }}
+            viewport={{ once: true }}
+          >
+            <div className="bg-gray-800/50 rounded-2xl p-6 border border-gray-700/50 hover:border-blue-500/60 transition-colors backdrop-blur-sm">
               <h3 className="text-2xl font-semibold text-gray-100 mb-4">Informações de Contato</h3>
 
               <div className="space-y-4">
@@ -128,29 +191,33 @@ export default function Contact() {
               <div className="mt-8">
                 <h4 className="text-sm font-medium text-gray-400 mb-3">Redes Sociais</h4>
                 <div className="flex gap-3">
-                  <a
+                  <motion.a
                     href="https://linkedin.com/in/seu-perfil"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="p-3 bg-gray-700/50 rounded-lg hover:bg-blue-500/10 transition-colors hover:scale-105"
+                    className="p-3 bg-gray-700/50 rounded-lg hover:bg-blue-500/10 transition-colors"
                     aria-label="LinkedIn"
+                    whileHover={{ scale: 1.1 }}
+                    whileTap={{ scale: 0.95 }}
                   >
                     <Linkedin className="w-5 h-5 text-blue-400" />
-                  </a>
+                  </motion.a>
 
-                  <a
+                  <motion.a
                     href="https://github.com/seu-usuario"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="p-3 bg-gray-700/50 rounded-lg hover:bg-gray-500/10 transition-colors hover:scale-105"
+                    className="p-3 bg-gray-700/50 rounded-lg hover:bg-gray-500/10 transition-colors"
                     aria-label="GitHub"
+                    whileHover={{ scale: 1.1 }}
+                    whileTap={{ scale: 0.95 }}
                   >
                     <Github className="w-5 h-5 text-gray-200 hover:text-white" />
-                  </a>
+                  </motion.a>
                 </div>
               </div>
             </div>
-          </div>
+          </motion.div>
         </div>
       </div>
     </section>

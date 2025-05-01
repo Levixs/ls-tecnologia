@@ -1,5 +1,6 @@
 import { Database, HardDrive, LayoutDashboard, Link2, Server, Terminal } from 'lucide-react'
 import { Button } from '../ui/button'
+import { motion } from 'framer-motion'
 
 export default function Services() {
     const services = [
@@ -41,30 +42,85 @@ export default function Services() {
         }
     ]
 
+    const container = {
+        hidden: { opacity: 0 },
+        visible: {
+            opacity: 1,
+            transition: {
+                staggerChildren: 0.1,
+                delayChildren: 0.1
+            }
+        }
+    }
+
+    const item = {
+        hidden: { y: 20, opacity: 0 },
+        visible: {
+            y: 0,
+            opacity: 1,
+            transition: {
+                duration: 0.4,
+                ease: "easeOut"
+            }
+        }
+    }
+
+    const hoverScale = {
+        scale: 1.02,
+        transition: {
+            duration: 0.2,
+            ease: "easeOut"
+        }
+    }
+
+    const techHover = {
+        scale: 1.05,
+        backgroundColor: "rgba(55, 65, 81, 0.6)",
+        color: "#f3f4f6",
+        transition: {
+            duration: 0.2,
+            ease: "easeOut"
+        }
+    }
+
     return (
-        <section id="services" className="py-20 ">
-            <div className="container mx-auto px-6">
-                <div className="text-center mb-16">
+        <section id="services" className="relative py-20 overflow-hidden">
+            <div className="absolute inset-0 overflow-hidden opacity-10">
+                <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px]" />
+            </div>
+
+            <div className="container mx-auto px-6 relative z-10">
+                <motion.div
+                    className="text-center mb-16"
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.5, ease: "easeOut" }}
+                    viewport={{ once: true }}
+                >
                     <h2 className="text-3xl md:text-4xl font-bold text-gray-100 mb-4">
                         Serviços <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">Especializados</span>
                     </h2>
                     <p className="text-lg text-gray-400 max-w-2xl mx-auto">
                         Soluções técnicas personalizadas para impulsionar sua operação e otimizar processos empresariais.
                     </p>
-                </div>
+                </motion.div>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 select-none">
+                <motion.div
+                    className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 select-none"
+                    variants={container}
+                    initial="hidden"
+                    whileInView="visible"
+                    viewport={{ once: true }}
+                >
                     {services.map((service, index) => (
-                        <div
+                        <motion.div
                             key={index}
-                            className="group bg-gray-800/50 rounded-xl p-6 border border-gray-700/50 hover:border-blue-500/30 transition-all hover:shadow-lg hover:shadow-blue-500/10 relative overflow-hidden"
+                            variants={item}
+                            whileHover={hoverScale}
+                            className="group bg-gray-800/50 rounded-xl p-6 border border-gray-700/50 hover:border-blue-500/30 transition-all hover:shadow-lg hover:shadow-blue-500/10 relative overflow-hidden backdrop-blur-sm"
                         >
-                            {/* Efeito neon de fundo */}
-                            <div className="absolute inset-0 bg-gradient-to-br from-transparent via-blue-500/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"></div>
-                            
-                            {/* Brilho neon nas bordas */}
-                            <div className="absolute inset-0 rounded-xl border-2 border-transparent group-hover:border-blue-400/20 pointer-events-none transition-all duration-300"></div>
-                            
+                            <div className="absolute inset-0 bg-gradient-to-br from-transparent via-blue-500/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
+                            <div className="absolute inset-0 rounded-xl border-2 border-transparent group-hover:border-blue-500/20 transition-all pointer-events-none" />
                             <div className="relative z-10">
                                 <div className="mb-4">
                                     <div className="w-12 h-12 rounded-lg bg-gray-700/50 flex items-center justify-center group-hover:bg-gray-700/70 transition-all group-hover:shadow-[0_0_15px_-3px_rgba(59,130,246,0.3)]">
@@ -73,33 +129,45 @@ export default function Services() {
                                 </div>
                                 <h3 className="text-xl font-semibold text-gray-100 mb-2 group-hover:text-white transition-colors">{service.title}</h3>
                                 <p className="text-gray-400 mb-4 group-hover:text-gray-300 transition-colors">{service.description}</p>
-
                                 <div className="mt-4 pt-4 border-t border-gray-700/50 group-hover:border-gray-700/70 transition-colors">
                                     <h4 className="text-sm font-medium text-gray-300 mb-2 group-hover:text-gray-200 transition-colors">Tecnologias relacionadas:</h4>
                                     <div className="flex flex-wrap gap-2">
                                         {service.highlights.map((tech, i) => (
-                                            <span
+                                            <motion.span
                                                 key={i}
                                                 className="text-xs bg-gray-700/40 text-gray-300 px-3 py-1 rounded-full group-hover:bg-gray-700/60 group-hover:text-gray-200 transition-all"
+                                                whileHover={techHover}
                                             >
                                                 {tech}
-                                            </span>
+                                            </motion.span>
                                         ))}
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        </motion.div>
                     ))}
-                </div>
+                </motion.div>
 
-                <div className="mt-7 text-center">
+                <motion.div
+                    className="mt-7 text-center"
+                    initial={{ opacity: 0 }}
+                    whileInView={{ opacity: 1 }}
+                    transition={{ duration: 0.5, ease: "easeOut" }}
+                    viewport={{ once: true }}
+                >
                     <p className="text-gray-400 mb-6">
                         Não encontrou exatamente o que precisa? Posso desenvolver uma solução personalizada para seu caso específico.
                     </p>
-                    <Button className="px-8 py-6 text-lg bg-gradient-to-r from-blue-500 to-cyan-500 hover:from-blue-600 hover:to-cyan-600 transition-all transform hover:scale-105 shadow-lg shadow-blue-500/30">
-                        Falar sobre um projeto personalizado
-                    </Button>
-                </div>
+                    <motion.div
+                        whileHover={hoverScale}
+                        whileTap={{ scale: 0.98 }}
+                        transition={{ duration: 0.15 }}
+                    >
+                        <Button className="px-8 py-6 text-lg bg-gradient-to-r from-blue-500 to-cyan-500 hover:from-blue-600 hover:to-cyan-600 transition-all shadow-lg shadow-blue-500/30">
+                            Falar sobre um projeto personalizado
+                        </Button>
+                    </motion.div>
+                </motion.div>
             </div>
         </section>
     )
