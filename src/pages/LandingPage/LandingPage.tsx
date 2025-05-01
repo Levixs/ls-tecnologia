@@ -1,3 +1,4 @@
+import Contact from "@/components/ContactSection/Contact";
 import Header from "@/components/Header/Header";
 import HeroSection from "@/components/HeroSection/Hero";
 import Services from "@/components/ServicesSection/Services";
@@ -18,6 +19,7 @@ export default function LandingPage() {
         <Header />
         <HeroSection />
         <Services />
+        <Contact />
         {/* components */}
       </div>
       <div className="absolute right-0 top-1/3 h-72 w-72 rounded-full bg-blue-900/20 blur-[100px]" />
