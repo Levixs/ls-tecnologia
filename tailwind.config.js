@@ -18,11 +18,8 @@ module.exports = {
     },
     extend: {
       colors: {
-        customCiano: "#DAFAFC",
-        customVermelho: "#FF3E30",
-        customAzul: "#176BEF",
-        cinzaOpacidadeBaixa: "#636364",
-        azulLogo: "#176BEF",
+        darkBlue: "#112661",
+        deepBlack: "#040404",
 
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
@@ -88,12 +85,22 @@ module.exports = {
           "50%": { transform: "translateY(-20px) rotate(5deg)" },
           "100%": { transform: "translateY(0px) rotate(0deg)" },
         },
+        "gradient-shift": {
+          '0%, 100%': { 'background-position': '0% 50%' },
+          '50%': { 'background-position': '100% 50%' },
+        },
+        "gradient-pulse": {
+          '0%, 100%': { 'opacity': 1 },
+          '50%': { 'opacity': 0.9 },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
         bounce: "bounce 2s infinite",
         float: "float 6s ease-in-out infinite",
+        "gradient-shift": "gradient-shift 8s ease infinite",
+        "gradient-pulse": "gradient-pulse 6s ease infinite",
       },
       fontSize: {
         sm: "0.8rem",
@@ -146,7 +153,30 @@ module.exports = {
       textShadow: {
         DEFAULT: "0 0 20px rgba(160, 196, 255, 0.3)",
       },
+      backgroundImage: {
+        'grid-white': "linear-gradient(to right, rgba(255,255,255,0.04) 1px, transparent 1px), linear-gradient(to bottom, rgba(255,255,255,0.04) 1px, transparent 1px)",
+        'noise-texture': "url('/noise.svg')",
+        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
+        'gradient-conic': 'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
+      },
+      boxShadow: {
+        'glow': '0 0 15px rgba(23, 107, 239, 0.5)',
+        'glow-lg': '0 0 30px rgba(23, 107, 239, 0.7)',
+      },
     },
   },
-  plugins: [require("tailwindcss-animate")],
+  plugins: [
+    require("tailwindcss-animate"),
+    function ({ addUtilities }) {
+      const newUtilities = {
+        '.text-shadow': {
+          textShadow: '0 0 20px rgba(160, 196, 255, 0.3)',
+        },
+        '.text-shadow-none': {
+          textShadow: 'none',
+        },
+      }
+      addUtilities(newUtilities)
+    }
+  ],
 }
