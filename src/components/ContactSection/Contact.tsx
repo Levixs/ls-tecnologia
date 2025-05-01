@@ -55,6 +55,8 @@ const ContactItem = React.memo(({
   </motion.div>
 ));
 
+
+
 export default function Contact() {
   return (
     <section id="contact" className="relative py-0 overflow-hidden">
