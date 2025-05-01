@@ -2,8 +2,11 @@ import { motion } from 'framer-motion'
 import { Button } from '../ui/button'
 
 export default function HeroSection() {
+    const whatsappRedirect = () => {
+        window.open('https://wa.me/5516992276144?text=Olá%2C+vi+o+seu+site+e+tenho+interesse+em+negociar.', '_blank')
+    }
     return (
-        <section className="relative overflow-hidden flex items-center justify-center">
+        <section id='hero' className="relative overflow-hidden flex items-center justify-center">
             <div id="hero-bg" className="absolute inset-0 overflow-hidden">
                 <motion.div
                     className="absolute inset-0 bg-gradient-to-br from-gray-900 via-blue-900/30 to-cyan-900/20"
@@ -49,7 +52,7 @@ export default function HeroSection() {
 
                         <div className="flex flex-wrap gap-4">
                             <div>
-                                <Button className="px-8 py-6 text-lg bg-gradient-to-r from-blue-500 to-cyan-500 hover:from-blue-600 hover:to-cyan-600 shadow-lg shadow-blue-500/30">
+                                <Button onClick={whatsappRedirect} className="px-8 py-6 text-lg bg-gradient-to-r from-blue-500 to-cyan-500 hover:from-blue-600 hover:to-cyan-600 shadow-lg shadow-blue-500/30">
                                     Solicitar Orçamento
                                 </Button>
                             </div>

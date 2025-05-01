@@ -85,7 +85,7 @@ export function FAQ() {
     const [activeCategory, setActiveCategory] = React.useState("general")
 
     return (
-        <section id="faq" className="relative py-16 md:py-24 bg-gradient-to-b from-gray-950 to-gray-900 overflow-hidden">
+        <section id="FAQ" className="relative py-16 md:py-24 bg-gradient-to-b from-gray-950 to-gray-900 overflow-hidden">
             {/* Efeito de background */}
             <div className="absolute inset-0 opacity-10">
                 <div className="absolute top-0 left-1/4 w-32 h-32 rounded-full bg-blue-500 blur-3xl opacity-20" />

@@ -10,8 +10,8 @@ export default function Header() {
   const navItems = [
     { name: 'Início', href: '#hero' },
     { name: 'Serviços', href: '#services' },
-    { name: 'Sobre', href: '#about' },
-    { name: 'Contato', href: '#contact' }
+    { name: 'Contato', href: '#contact' },
+    { name: 'FAQ', href: '#FAQ' }
   ];
 
   useEffect(() => {

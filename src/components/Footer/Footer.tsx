@@ -9,7 +9,7 @@ export default function Footer() {
 
     const footerLinks = [
         { title: 'Home', url: '#hero' },
-        { title: 'Serviços', url: '#Services' },
+        { title: 'Serviços', url: '#services' },
         { title: 'Processo de desenvolvimento', url: '#process' },
         { title: 'FAQ', url: '#FAQ' },
         { title: 'Contato', url: '#contact' },

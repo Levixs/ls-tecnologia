@@ -172,7 +172,7 @@ export default function Contact() {
                 <ContactItem
                   icon={<Mail className="w-5 h-5" />}
                   title="Email"
-                  value="contato@exemplo.com"
+                  value="contato@lstecnologia.com"
                   href="mailto:contato@exemplo.com"
                   colorClass="text-blue-400 bg-blue-400"
                   hoverColorClass="hover:text-blue-400"
@@ -181,8 +181,8 @@ export default function Contact() {
                 <ContactItem
                   icon={<Phone className="w-5 h-5" />}
                   title="Telefone/WhatsApp"
-                  value="+55 (11) 99999-9999"
-                  href="https://wa.me/5511999999999"
+                  value="+55 (16) 99227-6144"
+                  href="https://wa.me/5516992276144?text=Olá%2C+vi+o+seu+site+e+tenho+interesse+em+negociar."
                   colorClass="text-green-400 bg-green-400"
                   hoverColorClass="hover:text-green-400"
                 />
@@ -192,7 +192,7 @@ export default function Contact() {
                 <h4 className="text-sm font-medium text-gray-400 mb-3">Redes Sociais</h4>
                 <div className="flex gap-3">
                   <motion.a
-                    href="https://linkedin.com/in/seu-perfil"
+                    href="https://www.linkedin.com/in/gleidsonlevi/"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="p-3 bg-gray-700/50 rounded-lg hover:bg-blue-500/10 transition-colors"
@@ -204,7 +204,7 @@ export default function Contact() {
                   </motion.a>
 
                   <motion.a
-                    href="https://github.com/seu-usuario"
+                    href="https://github.com/Levixs"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="p-3 bg-gray-700/50 rounded-lg hover:bg-gray-500/10 transition-colors"
