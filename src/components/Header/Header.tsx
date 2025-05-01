@@ -1,5 +1,5 @@
 import { motion, AnimatePresence } from 'framer-motion';
-import lstech from "./images/lstech.png";
+import lstech from "./images/lstech.webp";
 import { useEffect, useState } from 'react';
 
 export default function Header() {

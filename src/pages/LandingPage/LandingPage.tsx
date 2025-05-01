@@ -1,5 +1,6 @@
 import Header from "@/components/Header/Header";
-import HeroSection from "@/components/HeroSection/HeroSection";
+import HeroSection from "@/components/HeroSection/Hero";
+import Services from "@/components/ServicesSection/Services";
 import { cn } from "@/lib/utils";
 
 export default function LandingPage() {
@@ -16,6 +17,7 @@ export default function LandingPage() {
         {/* components */}
         <Header />
         <HeroSection />
+        <Services />
         {/* components */}
       </div>
       <div className="absolute right-0 top-1/3 h-72 w-72 rounded-full bg-blue-900/20 blur-[100px]" />
