@@ -55,11 +55,9 @@ const ContactItem = React.memo(({
   </motion.div>
 ));
 
-
-
 export default function Contact() {
   return (
-    <section id="contact" className="relative py-0 overflow-hidden">
+    <section id="contact" className="relative py-12 overflow-hidden flex items-center justify-center min-h-screen">
       <div className="absolute inset-0 overflow-hidden opacity-20">
         <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px]"></div>
 
@@ -88,9 +86,9 @@ export default function Contact() {
         ))}
       </div>
 
-      <div className="container mx-auto px-4 sm:px-6 relative z-10">
+      <div className="container mx-auto px-4 sm:px-6 relative z-10 max-w-2xl">
         <motion.div
-          className="text-center mb-16 py-10"
+          className="text-center mb-12"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
@@ -99,17 +97,18 @@ export default function Contact() {
           <h2 className="text-3xl md:text-4xl font-bold text-gray-100 mb-4">
             Vamos <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">Conversar</span>
           </h2>
-          <p className="text-lg text-gray-400 max-w-2xl mx-auto">
+          <p className="text-lg text-gray-400">
             Entre em contato para discutir seu projeto ou solicitar um orçamento personalizado.
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+        <div className="flex flex-col gap-8 w-full">
+          {/* Formulário */}
           <motion.div
-            className="bg-gray-800/50 rounded-2xl p-6 border border-gray-700/50 hover:border-blue-500/60 transition-colors backdrop-blur-sm"
-            initial={{ opacity: 0, x: -20 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
+            className="bg-gray-800/50 rounded-2xl p-6 border border-gray-700/50 hover:border-blue-500/60 transition-colors backdrop-blur-sm w-full"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.4 }}
             viewport={{ once: true }}
           >
             <h3 className="text-2xl font-semibold text-gray-100 mb-6">Envie uma mensagem</h3>
@@ -160,63 +159,62 @@ export default function Contact() {
             </form>
           </motion.div>
 
+          {/* Informações de contato */}
           <motion.div
-            className="space-y-6"
-            initial={{ opacity: 0, x: 20 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.6, delay: 0.4 }}
+            className="bg-gray-800/50 rounded-2xl p-6 border border-gray-700/50 hover:border-blue-500/60 transition-colors backdrop-blur-sm w-full"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
             viewport={{ once: true }}
           >
-            <div className="bg-gray-800/50 rounded-2xl p-6 border border-gray-700/50 hover:border-blue-500/60 transition-colors backdrop-blur-sm">
-              <h3 className="text-2xl font-semibold text-gray-100 mb-4">Informações de Contato</h3>
+            <h3 className="text-2xl font-semibold text-gray-100 mb-4">Informações de Contato</h3>
 
-              <div className="space-y-4">
-                <ContactItem
-                  icon={<Mail className="w-5 h-5" />}
-                  title="Email"
-                  value="contato@lstecnologia.com"
-                  href="mailto:contato@lstecnologia.com"
-                  colorClass="text-blue-400 bg-blue-400"
-                  hoverColorClass="hover:text-blue-400"
-                />
+            <div className="space-y-4">
+              <ContactItem
+                icon={<Mail className="w-5 h-5" />}
+                title="Email"
+                value="contato@lstecnologia.com"
+                href="mailto:contato@lstecnologia.com"
+                colorClass="text-blue-400 bg-blue-400"
+                hoverColorClass="hover:text-blue-400"
+              />
 
-                <ContactItem
-                  icon={<Phone className="w-5 h-5" />}
-                  title="Telefone/WhatsApp"
-                  value="+55 (16) 99227-6144"
-                  href="https://wa.me/5516992276144?text=Olá%2C+vi+o+seu+site+e+tenho+interesse+em+negociar."
-                  colorClass="text-green-400 bg-green-400"
-                  hoverColorClass="hover:text-green-400"
-                />
-              </div>
+              <ContactItem
+                icon={<Phone className="w-5 h-5" />}
+                title="Telefone/WhatsApp"
+                value="+55 (16) 99227-6144"
+                href="https://wa.me/5516992276144?text=Olá%2C+vi+o+seu+site+e+tenho+interesse+em+negociar."
+                colorClass="text-green-400 bg-green-400"
+                hoverColorClass="hover:text-green-400"
+              />
+            </div>
 
-              <div className="mt-8">
-                <h4 className="text-sm font-medium text-gray-400 mb-3">Redes Sociais</h4>
-                <div className="flex gap-3">
-                  <motion.a
-                    href="https://www.linkedin.com/in/gleidsonlevi/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="p-3 bg-gray-700/50 rounded-lg hover:bg-blue-500/10 transition-colors"
-                    aria-label="LinkedIn"
-                    whileHover={{ scale: 1.1 }}
-                    whileTap={{ scale: 0.95 }}
-                  >
-                    <Linkedin className="w-5 h-5 text-blue-400" />
-                  </motion.a>
+            <div className="mt-8">
+              <h4 className="text-sm font-medium text-gray-400 mb-3">Redes Sociais</h4>
+              <div className="flex gap-3">
+                <motion.a
+                  href="https://www.linkedin.com/in/gleidsonlevi/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="p-3 bg-gray-700/50 rounded-lg hover:bg-blue-500/10 transition-colors"
+                  aria-label="LinkedIn"
+                  whileHover={{ scale: 1.1 }}
+                  whileTap={{ scale: 0.95 }}
+                >
+                  <Linkedin className="w-5 h-5 text-blue-400" />
+                </motion.a>
 
-                  <motion.a
-                    href="https://github.com/Levixs"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="p-3 bg-gray-700/50 rounded-lg hover:bg-gray-500/10 transition-colors"
-                    aria-label="GitHub"
-                    whileHover={{ scale: 1.1 }}
-                    whileTap={{ scale: 0.95 }}
-                  >
-                    <Github className="w-5 h-5 text-gray-200 hover:text-white" />
-                  </motion.a>
-                </div>
+                <motion.a
+                  href="https://github.com/Levixs"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="p-3 bg-gray-700/50 rounded-lg hover:bg-gray-500/10 transition-colors"
+                  aria-label="GitHub"
+                  whileHover={{ scale: 1.1 }}
+                  whileTap={{ scale: 0.95 }}
+                >
+                  <Github className="w-5 h-5 text-gray-200 hover:text-white" />
+                </motion.a>
               </div>
             </div>
           </motion.div>
