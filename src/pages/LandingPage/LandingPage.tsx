@@ -3,6 +3,7 @@ import { FAQ } from "@/components/FAQ/FAQ";
 import Footer from "@/components/Footer/Footer";
 import Header from "@/components/Header/Header";
 import HeroSection from "@/components/HeroSection/Hero";
+import Partners from "@/components/PartnersSection/Partners";
 import { Process } from "@/components/ProcessSection/Process";
 import Services from "@/components/ServicesSection/Services";
 import { cn } from "@/lib/utils";
@@ -23,6 +24,7 @@ export default function LandingPage() {
         <HeroSection />
         <Services />
         <Process />
+        <Partners />
         <FAQ />
         <Contact />
         <Footer />

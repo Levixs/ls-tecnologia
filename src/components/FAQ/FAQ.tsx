@@ -69,7 +69,7 @@ const faqCategories = [
             },
             {
                 question: "Vocês oferecem treinamento?",
-                answer: "Sim, fornecemos treinamento completo para sua equipe com documentação detalhada e sessões práticas. Também disponibilizamos vídeos tutoriais e um portal de conhecimento.",
+                answer: "Não, não realizamos treinamento.",
                 likes: 22
             },
             {
@@ -80,6 +80,10 @@ const faqCategories = [
         ]
     }
 ]
+
+function emailRedirect() {
+    window.open("mailto:contato@lstecnologia.com", "_blank")
+}
 
 export function FAQ() {
     const [activeCategory, setActiveCategory] = React.useState("general")
@@ -219,6 +223,7 @@ export function FAQ() {
                                 </p>
                                 <div className="flex flex-col sm:flex-row justify-center gap-4">
                                     <Button
+                                        onClick={emailRedirect}
                                         className="px-6 py-3 rounded-lg bg-gradient-to-r from-blue-500 to-cyan-500 text-white font-semibold hover:brightness-110 transition-all shadow-lg shadow-blue-500/30"
                                         size="lg"
                                     >

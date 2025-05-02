@@ -10,7 +10,7 @@ const processSteps = [
         icon: <GitFork className="w-5 h-5" />,
         title: "Descoberta & Planejamento",
         description: "Análise técnica detalhada e arquitetura do sistema",
-        techs: ["Swagger", "Figma", "User Stories"],
+        techs: ["Miro", "Figma"],
         color: "from-blue-400 to-cyan-400",
         bgColor: "bg-gradient-to-br from-blue-500/10 to-cyan-500/10"
     },
@@ -18,7 +18,7 @@ const processSteps = [
         icon: <Code className="w-5 h-5" />,
         title: "Sprint de Desenvolvimento",
         description: "Código limpo e modular com versionamento contínuo",
-        techs: ["Git Flow", "Clean Code", "Pair Programming"],
+        techs: ["Git Flow", "Clean Code", "Kanban", "GIT"],
         color: "from-purple-400 to-fuchsia-400",
         bgColor: "bg-gradient-to-br from-purple-500/10 to-fuchsia-500/10"
     },
@@ -26,7 +26,7 @@ const processSteps = [
         icon: <Server className="w-5 h-5" />,
         title: "Implementação de API",
         description: "Construção de endpoints robustos e documentados",
-        techs: ["REST/GraphQL", "WebSockets", "gRPC"],
+        techs: ["Microservices", "Documentação Swagger"],
         color: "from-amber-400 to-orange-400",
         bgColor: "bg-gradient-to-br from-amber-500/10 to-orange-500/10"
     },

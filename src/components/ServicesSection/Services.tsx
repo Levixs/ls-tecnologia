@@ -7,26 +7,26 @@ export default function Services() {
         {
             icon: <Server className="w-8 h-8 text-blue-400 group-hover:text-blue-300 transition-colors" />,
             title: "Desenvolvimento de APIs",
-            description: "APIs RESTful e GraphQL de alta performance, documentação com Swagger/OpenAPI e integração com diversos sistemas.",
-            highlights: ["Node.js/Express", "NestJS", "Python FastAPI", "Autenticação JWT/OAuth"]
+            description: "APIs de alta performance, documentação com Swagger/Postman e integração com diversos sistemas.",
+            highlights: ["NestJS", "Flask", "Django", "Spring Boot"]
         },
         {
             icon: <HardDrive className="w-8 h-8 text-cyan-400 group-hover:text-cyan-300 transition-colors" />,
             title: "Aplicativos Desktop",
             description: "Soluções desktop multiplataforma para automação de processos internos e gestão empresarial.",
-            highlights: ["Electron.js", "Python Tkinter", "Java Swing", "Integração com hardware"]
+            highlights: ["Python Tkinter", "Delphi", "C#"]
         },
         {
             icon: <LayoutDashboard className="w-8 h-8 text-purple-400 group-hover:text-purple-300 transition-colors" />,
             title: "Dashboards Analíticos",
             description: "Visualização de dados em tempo real com gráficos interativos e relatórios personalizáveis.",
-            highlights: ["Power BI", "Grafana", "Tableau", "Dash (Python)"]
+            highlights: ["Power BI", "Grafana", "Tableau", "Targit (MyBi)"]
         },
         {
             icon: <Link2 className="w-8 h-8 text-green-400 group-hover:text-green-300 transition-colors" />,
             title: "Integração com ERPs",
             description: "Conexão entre sistemas e ERPs corporativos como WinThor e Consinco para otimização de processos.",
-            highlights: ["Winthor TOTVS", "Consinco", "SAP Integration", "Banco de dados Oracle/SQL"]
+            highlights: ["TOTVS Winthor", "TOTVS Consinco"]
         },
         {
             icon: <Terminal className="w-8 h-8 text-yellow-400 group-hover:text-yellow-300 transition-colors" />,
@@ -38,7 +38,7 @@ export default function Services() {
             icon: <Database className="w-8 h-8 text-red-400 group-hover:text-red-300 transition-colors" />,
             title: "Banco de Dados",
             description: "Modelagem, otimização e migração de bancos de dados relacionais e não-relacionais.",
-            highlights: ["PostgreSQL", "MongoDB", "Redis", "Otimização de queries"]
+            highlights: ["PostgreSQL", "MongoDB", "Oracle", "PLSQL", "Otimização de queries"]
         }
     ]
 

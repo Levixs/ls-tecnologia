@@ -175,7 +175,7 @@ export default function Contact() {
                   icon={<Mail className="w-5 h-5" />}
                   title="Email"
                   value="contato@lstecnologia.com"
-                  href="mailto:contato@exemplo.com"
+                  href="mailto:contato@lstecnologia.com"
                   colorClass="text-blue-400 bg-blue-400"
                   hoverColorClass="hover:text-blue-400"
                 />

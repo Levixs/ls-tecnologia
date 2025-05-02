@@ -15,7 +15,7 @@ export default function Footer() {
         { title: 'Contato', url: '#contact' },
     ]
 
-    const techStack = ['Next.js', 'TypeScript', 'Tailwind CSS', 'Framer Motion', 'ShadCN UI']
+    const techStack = ['Next.js', 'TypeScript', 'Tailwind CSS', 'Python', 'ShadCN UI']
 
     const itemVariants = {
         hidden: { y: 20, opacity: 0 },
@@ -48,22 +48,8 @@ export default function Footer() {
                         className="col-span-1"
                     >
                         <div className="flex items-center mb-4">
-                            <motion.div
-                                animate={{
-                                    rotate: [0, 5, -5, 0],
-                                    scale: [1, 1.1, 1],
-                                }}
-                                transition={{
-                                    duration: 1.5,
-                                    repeat: Infinity,
-                                    repeatType: 'reverse',
-                                }}
-                                className="text-3xl font-bold mr-2 text-blue-400"
-                            >
-                                LS
-                            </motion.div>
                             <span className="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-cyan-400">
-                                Tecnologia
+                                LS Tecnologia
                             </span>
                         </div>
                         <p className="text-zinc-400 mb-4">
