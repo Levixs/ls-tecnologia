@@ -2,7 +2,7 @@ import { Badge } from '@/components/ui/badge'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
 import { Separator } from '@/components/ui/separator'
 import { motion } from 'framer-motion'
-import { Code, GitFork, Rocket, Server, TestTube2 } from 'lucide-react'
+import { Code, GitFork, Rocket, Server } from 'lucide-react'
 import React from 'react'
 
 const processSteps = [
@@ -29,14 +29,6 @@ const processSteps = [
         techs: ["REST/GraphQL", "WebSockets", "gRPC"],
         color: "from-amber-400 to-orange-400",
         bgColor: "bg-gradient-to-br from-amber-500/10 to-orange-500/10"
-    },
-    {
-        icon: <TestTube2 className="w-5 h-5" />,
-        title: "Garantia de Qualidade",
-        description: "Testes automatizados e validação de segurança",
-        techs: ["Jest", "Postman", "OWASP"],
-        color: "from-emerald-400 to-teal-400",
-        bgColor: "bg-gradient-to-br from-emerald-500/10 to-teal-500/10"
     },
     {
         icon: <Rocket className="w-5 h-5" />,
