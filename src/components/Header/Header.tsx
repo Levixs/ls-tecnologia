@@ -1,5 +1,5 @@
 import { motion, AnimatePresence } from 'framer-motion';
-import lstech from "./images/lstech.webp";
+import lstech from "./images/logoLS.svg";
 import { useEffect, useState } from 'react';
 
 export default function Header() {
@@ -55,25 +55,32 @@ export default function Header() {
         <div className="container mx-auto px-4 sm:px-6 py-3">
           <div className="flex items-center justify-between">
             <motion.div
-              className="flex items-center"
+              className="flex items-center cursor-pointer"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               transition={{ type: 'spring', stiffness: 400, damping: 10 }}
             >
-              <a href="#hero" className="flex items-center gap-2 focus:outline-none">
-                <motion.div
-                  className="w-16 h-16 rounded-full border-2 border-white/10 shadow-lg shadow-blue-500/30 overflow-hidden flex items-center justify-center"
-                  whileHover={{ rotate: 5, scale: 1.1 }}
-                  transition={{ type: 'spring', stiffness: 300 }}
-                >
-                  <img
-                    src={lstech}
-                    alt="LS Tecnologia logo"
-                    className="w-full h-full object-contain p-1"
-                    loading="eager"
-                    width={64}
-                    height={64}
-                  />
+              <a href="#hero" className="flex items-center focus:outline-none" aria-label="Ir para o topo">
+                <motion.div className="w-24 h-24 rounded-full overflow-hidden flex items-center justify-center">
+                  <motion.div
+                    className="relative p-1"
+                    whileHover={{
+                      rotate: 5,
+                      scale: 1.1,
+                      boxShadow: "0 0 20px 5px rgba(59, 130, 246, 0.5)"
+                    }}
+                    transition={{ type: 'spring', stiffness: 300 }}
+                  >
+                    <motion.img
+                      src={lstech}
+                      alt="Logo LS Tecnologia"
+                      className="w-full h-full object-contain"
+                      loading="eager"
+                      width={64}
+                      height={64}
+                      draggable="false"
+                    />
+                  </motion.div>
                 </motion.div>
               </a>
             </motion.div>

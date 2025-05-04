@@ -19,7 +19,6 @@ export default function LandingPage() {
       <div className="absolute inset-0 z-0 bg-[radial-gradient(circle_at_bottom_left,_var(--tw-gradient-stops))] from-black via-85% via-gray-900 to-[#112661] animate-gradient-shift" />
       <div className="absolute inset-0 z-10 bg-[url('/noise.svg')] opacity-5 mix-blend-soft-light" />
       <div className="relative z-20">
-        {/* components */}
         <Header />
         <HeroSection />
         <Services />
@@ -28,7 +27,6 @@ export default function LandingPage() {
         <FAQ />
         <Contact />
         <Footer />
-        {/* components */}
       </div>
       <div className="absolute right-0 top-1/3 h-72 w-72 rounded-full bg-blue-900/20 blur-[100px]" />
       <div className="absolute left-0 bottom-1/4 h-64 w-64 rounded-full bg-indigo-800/10 blur-[80px]" />
