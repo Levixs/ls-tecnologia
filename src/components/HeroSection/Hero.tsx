@@ -41,7 +41,7 @@ export default function HeroSection() {
                                 Potencialize seu negócio com{' '}
                                 <span
                                     className="text-transparent bg-clip-text bg-gradient-to-r from-blue-300 to-cyan-400">
-                                    APIs robustas
+                                    soluções robustas
                                 </span>
                             </h1>
                             <p className="mt-4 text-lg text-gray-300 max-w-lg">

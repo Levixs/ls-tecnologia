@@ -8,7 +8,7 @@ export default function Services() {
             icon: <Server className="w-8 h-8 text-blue-400 group-hover:text-blue-300 transition-colors" />,
             title: "Desenvolvimento de APIs",
             description: "APIs de alta performance, documentação com Swagger/Postman e integração com diversos sistemas.",
-            highlights: ["NestJS", "Flask", "Django", "Spring Boot"]
+            highlights: ["Flask", "Django", "Spring Boot"]
         },
         {
             icon: <HardDrive className="w-8 h-8 text-cyan-400 group-hover:text-cyan-300 transition-colors" />,
@@ -32,7 +32,7 @@ export default function Services() {
             icon: <Terminal className="w-8 h-8 text-yellow-400 group-hover:text-yellow-300 transition-colors" />,
             title: "Automatização de Processos",
             description: "Robôs para automação de tarefas repetitivas e integração entre sistemas legados.",
-            highlights: ["Python (Selenium)", "RPA", "Web Scraping", "Automação de planilhas"]
+            highlights: ["Python (Selenium)", "RPA", "Web Scraping", "Automação de planilhas", "Pandas", "Openpyxl"]
         },
         {
             icon: <Database className="w-8 h-8 text-red-400 group-hover:text-red-300 transition-colors" />,
