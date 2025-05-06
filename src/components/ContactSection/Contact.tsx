@@ -68,7 +68,7 @@ export default function Contact() {
                 <textarea
                   id="message"
                   rows={4}
-                  className="w-full px-4 py-2 bg-gray-700/50 border min-h-28 border-gray-600/50 rounded-lg text-gray-200 focus:outline-none focus:ring-1 focus:ring-blue-500 transition-colors"
+                  className="w-full px-4 py-2 bg-gray-700/50 border min-h-28 h-28 border-gray-600/50 rounded-lg text-gray-200 focus:outline-none focus:ring-1 focus:ring-blue-500 transition-colors"
                   placeholder="Descreva seu projeto ou dúvida..."
                 ></textarea>
               </div>
@@ -146,7 +146,7 @@ export default function Contact() {
                   <div className="p-2 bg-green-500/10 rounded-lg text-green-400">
                     <Check className="w-5 h-5" />
                   </div>
-                  <div>
+                  <div className='mb-1'>
                     <h4 className="text-sm font-medium text-gray-400">Status Atual</h4>
                     <p className="text-gray-200">Disponível para novos projetos</p>
                   </div>
