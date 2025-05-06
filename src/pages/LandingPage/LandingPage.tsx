@@ -1,5 +1,5 @@
 import Contact from "@/components/ContactSection/Contact";
-import { FAQ } from "@/components/FAQ/FAQ";
+import FAQ from "@/components/FAQ/FAQ";
 import Footer from "@/components/Footer/Footer";
 import Header from "@/components/Header/Header";
 import HeroSection from "@/components/HeroSection/Hero";
@@ -21,8 +21,8 @@ export default function LandingPage() {
       <div className="relative z-20">
         <Header />
         <HeroSection />
-        {/* <Services /> */}
-        {/* <Process /> */}
+        <Services />
+        <Process />
         <Partners />
         <FAQ />
         <Contact />

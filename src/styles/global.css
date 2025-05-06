@@ -75,7 +75,7 @@
   }
 }
 body {
-  background-color: #f7f7f7;
+  background-color: #1a347c;
 }
 .navbar-link-active {
   position: relative;
@@ -102,16 +102,12 @@ html {
   scroll-behavior: smooth;
 }
 
-/* @keyframes gradient-shift {
-  0%, 100% {
-    background-position: 0% 50%;
+@keyframes fade-in {
+  from {
+    opacity: 0;
   }
-  50% {
-    background-position: 100% 50%;
+  to {
+    opacity: 1;
   }
 }
 
-.animate-gradient-shift {
-  animation: gradient-shift 15s ease infinite;
-  background-size: 200% 200%;
-} */
