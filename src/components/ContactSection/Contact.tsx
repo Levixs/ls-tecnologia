@@ -91,16 +91,16 @@ export default function Contact() {
                 <ContactItem
                   icon={<Mail className="w-5 h-5" />}
                   title="Email"
-                  value="contato@exemplo.com"
-                  href="mailto:contato@exemplo.com"
+                  value="contato@lstecnologia.com"
+                  href="mailto:contato@lstecnologia.com"
                   color="text-blue-400"
                 />
 
                 <ContactItem
                   icon={<Phone className="w-5 h-5" />}
                   title="Telefone/WhatsApp"
-                  value="+55 (11) 99999-9999"
-                  href="tel:+5511999999999"
+                  value="(16) 99227-6144"
+                  href="https://api.whatsapp.com/send/?phone=5516992276144&text=Olá%2C+vi+o+seu+site+e+tenho+interesse+em+negociar.&type=phone_number&app_absent=0"
                   color="text-green-400"
                 />
               </div>
@@ -109,7 +109,7 @@ export default function Contact() {
                 <h4 className="text-sm font-medium text-gray-400 mb-3">Redes Sociais</h4>
                 <div className="flex gap-3">
                   <a
-                    href="https://linkedin.com/in/seu-perfil"
+                    href="https://linkedin.com/in/gleidsonlevi"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="p-2 bg-gray-700/50 rounded-lg hover:bg-blue-500/10 transition-colors"
@@ -119,7 +119,7 @@ export default function Contact() {
                   </a>
 
                   <a
-                    href="https://github.com/seu-usuario"
+                    href="https://github.com/Levixs"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="p-2 bg-gray-700/50 rounded-lg hover:bg-gray-500/10 transition-colors"
