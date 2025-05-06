@@ -21,8 +21,8 @@ export default function LandingPage() {
       <div className="relative z-20">
         <Header />
         <HeroSection />
-        <Services />
-        <Process />
+        {/* <Services /> */}
+        {/* <Process /> */}
         <Partners />
         <FAQ />
         <Contact />

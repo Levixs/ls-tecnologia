@@ -146,7 +146,7 @@ export default function Contact() {
                   <div className="p-2 bg-green-500/10 rounded-lg text-green-400">
                     <Check className="w-5 h-5" />
                   </div>
-                  <div className='mb-1'>
+                  <div className='mb-2'>
                     <h4 className="text-sm font-medium text-gray-400">Status Atual</h4>
                     <p className="text-gray-200">Disponível para novos projetos</p>
                   </div>
